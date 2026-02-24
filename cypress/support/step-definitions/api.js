@@ -14,7 +14,7 @@ When(/^Create a new employees with FirstName "(.+)" , LastName "(.+)", email "(.
   cy.request({
     method: "POST",
     url: "/api/v1/employees",
-    failOnStatusCode: false,
+    failOnStatusCode: false, // close status fail case 404
     body: requestBody
   }).then((response) => {
     apiResponse = response;

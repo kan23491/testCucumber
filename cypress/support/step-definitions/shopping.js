@@ -67,6 +67,7 @@ Then(/^System should show message submit success$/i, () => {
         const city = win.sessionStorage.getItem("city");
         const country = win.sessionStorage.getItem("country");
         const total = win.sessionStorage.getItem("total");
+        
         cy.get("#message").invoke("text").then((message) => {
         expect(message).to.equal(
           `Congrats! Your order of $${total}  has been registered and will be shipped to ${street}, ${city} - ${country}.`
